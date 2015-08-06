@@ -6,5 +6,48 @@
     <include file="example.xml"/>
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
+        
+        <!--        <interceptors>
+            <interceptor name="loginInterceptor" class="management.LoginInterceptor">
+            </interceptor>
+            <interceptor-stack name="loginStack">
+                <interceptor-ref name="loginInterceptor"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>-->
+        
+        <action name="*">
+            <result>/error.jsp</result>
+        </action>
+        <action name="loginAction" class="database.HomeConnection">
+            <result name="success" type="redirect">
+                <param name="location">
+                    /home.jsp
+                </param >
+            </result>
+            <result name="input">/home.jsp</result>
+            <result name="error">/home.jsp</result>
+            <result name="admin" type="redirect">
+                <param name="location">
+                    /admin.jsp
+                </param>
+            </result>
+            <result name="user" type="redirect">
+                <param name="location">
+                    /user.jsp
+                </param>
+            </result>
+        </action>
+        <action name="logoutAction" class="management.LogoutAction">
+            <result name="success" type="redirect">
+                <param name="location">
+                    /home.jsp
+                </param>
+            </result>
+        </action>
+        <action name="registrationAction" class="management.RegistrationAction">
+            <result name="success">/admin/registration-success.jsp</result>
+            <result name="error">/admin/registration.jsp</result>
+        </action>
     </package>
 </struts>

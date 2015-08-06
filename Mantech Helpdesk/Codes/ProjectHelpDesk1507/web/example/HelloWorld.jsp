@@ -4,30 +4,15 @@
 
 <html>
     <head>
-        <title><s:text name="HelloWorld.message"/></title>
+        
     </head>
 
     <body>
-        <h2><s:property value="message"/></h2>
-
-        <h3>Languages</h3>
-        <ul>
-            <li>
-                <s:url id="url" action="HelloWorld">
-                    <s:param name="request_locale">en</s:param>
-                </s:url>
-                <s:a href="%{url}">English</s:a>
-            </li>
-
-            <li>
-                <s:url id="url" action="HelloWorld">
-                    <s:param name="request_locale">es</s:param>
-                </s:url>
-
-                <s:a href="%{url}">Espanol</s:a>
-
-            </li>
-        </ul>
+        <form action="loginAction" method="post">
+            Account: <br/><input type="text" name="account"/><br/>
+            Password:<br/><input type="password" name="password"/><br/>
+            <input type="submit" value="Login"/>		
+        </form>
     </body>
 </html>
 
