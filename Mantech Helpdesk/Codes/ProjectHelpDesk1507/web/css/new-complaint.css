@@ -4,11 +4,11 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Jul 26, 2015, 1:53:48 AM
+    Created on : Aug 1, 2015, 3:15:54 PM
     Author     : Jun
 */
 
-.account-info {
+.complaint-info {
     padding: 40px;
     width: auto;
     background-color: #F7F7F7;
@@ -18,23 +18,48 @@ and open the template in the editor.
     overflow: hidden;
 }
 
-.account-info h1 {
+.complaint-info h1 {
     font-weight: 100;
     text-align: center;
     font-size: 2.3em;
 }
 
-.account-info input[type=submit] {
+.complaint-info input[type=submit] {
     width: 100%;
     display: block;
     margin-bottom: 10px;
     position: relative;
 }
 
-.account-info input[type=text], input[type=password], input[type=email] {
+.complaint-info input[type=text] {
     height: 44px;
     font-size: 16px;
     width: 100%;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    text-align: center;
+}
+
+.complaint-info input[type=text]:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.complaint-info textarea {
+    min-height: 88px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 10px;
     -webkit-appearance: none;
     background: #fff;
@@ -44,14 +69,6 @@ and open the template in the editor.
     padding: 0 8px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-}
-
-.account-info input[type=text]:hover, input[type=password]:hover, input[type=email]:hover {
-    border: 1px solid #b9b9b9;
-    border-top: 1px solid #a0a0a0;
-    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
 }
 
 .create {

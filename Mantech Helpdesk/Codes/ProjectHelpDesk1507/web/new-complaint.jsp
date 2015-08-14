@@ -1,6 +1,6 @@
 <%-- 
-    Document   : registration
-    Created on : Jul 26, 2015, 11:05:11 PM
+    Document   : new-complaint
+    Created on : Aug 1, 2015, 3:05:21 PM
     Author     : Jun
 --%>
 
@@ -12,8 +12,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="keywords" content="" />
         <meta name="description" content="" />
-        <link rel="stylesheet" href="../css/admin.css" />
-        <link rel="stylesheet" href="../css/registration.css"/>
+        <link rel="stylesheet" href="css/admin.css" />
+        <link rel="stylesheet" href="css/new-complaint.css"/>
         <title>Registration's page</title>
     </head>
     <body>
@@ -26,24 +26,22 @@
                 </div>
                 <div id="menu">
                     <ul>
-                        <li><a href="../admin.jsp" accesskey="1" title="">Welcome</a></li>
-                        <li class="current_page_item"><a href="registration.jsp" accesskey="2" title="">Create Account</a></li>
-                        <li><a href="#" accesskey="3" title="">Complaints</a></li>
-                        <li><a href="#" accesskey="4" title="">Reports</a></li>
+                        <li><a href="user.jsp" accesskey="1" title="">Welcome</a></li>
+                        <li class="current_page_item"><a href="new-complaint.jsp" accesskey="2" title="">Lodge a new complaint</a></li>
+                        <li><a href="displayComplaintLog" accesskey="3" title="">Complaint log</a></li>
+                        <li><a href="#" accesskey="4" title="">Profiles</a></li>
                     </ul>
                 </div>
             </div>
             <div id="main">
-                <div class="account-info">
-                    <h1>Create new account for employees</h1><br />
-                    <form action="registrationAction" method="post">
-                        <input type="text" name="account" placeholder="Account" required="required" />
-                        <input type="password" name="password" placeholder="Password" required="required"/>
-                        <input type="password" name="repassword" placeholder="Re-Password" required="required"/>
-                        <input type="text" name="fullname" placeholder="Full Name" required="required" />
-                        <input type="email" name="email" placeholder="Email" required="required" />
+                <div class="complaint-info">
+                    <h1>Create new complaint</h1><br />
+                    <form action="createComplaintAction" method="post">
+                        <input type="text" name="title" placeholder="Input your complaint title" required="required" />
+                        <textarea name="complaintDetails" required="required"></textarea>
                         <br/>
-                        <input type="submit" value="Create" name="create" class="create create-submit"/>
+                        <br/>
+                        <input type="submit" value="Create new complaint" name="create" class="create create-submit"/>
                     </form>
                     <s:if test="hasActionMessages()">
                         <div style="color: red">

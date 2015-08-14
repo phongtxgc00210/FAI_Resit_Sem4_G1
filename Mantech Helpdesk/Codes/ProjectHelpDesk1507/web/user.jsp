@@ -22,13 +22,13 @@
                 <div id="logo">
                     <img src="http://i.imgur.com/zHJ64Cg.jpg" alt="" />
                     <h1><a href="#">${username}</a></h1>
-                    <span><a href="<s:url action="logoutAction"/>">log out</a></span>
+                    <span><a href="<s:url action="logoutAction" />">log out</a></span>
                 </div>
                 <div id="menu">
                     <ul>
                         <li class="current_page_item"><a href="user.jsp" accesskey="1" title="">Welcome</a></li>
-                        <li><a href="#" accesskey="2" title="">Lodge a new complaint</a></li>
-                        <li><a href="#" accesskey="3" title="">Complaint log</a></li>
+                        <li><a href="new-complaint.jsp" accesskey="2" title="">Lodge a new complaint</a></li>
+                        <li><a href="displayComplaintLog" accesskey="3" title="">Complaint log</a></li>
                         <li><a href="#" accesskey="4" title="">Profiles</a></li>
                     </ul>
                 </div>

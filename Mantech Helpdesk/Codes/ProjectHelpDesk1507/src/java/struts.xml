@@ -46,8 +46,22 @@
             </result>
         </action>
         <action name="registrationAction" class="management.RegistrationAction">
-            <result name="success">/admin/registration-success.jsp</result>
-            <result name="error">/admin/registration.jsp</result>
+            <result name="success">registration-success.jsp</result>
+            <result name="error">registration.jsp</result>
+        </action>
+        <action name="createComplaintAction" class="management.CreateComplaint">
+            <result name="success" type="redirect">
+                <param name="location">
+                    /user.jsp
+                </param>
+            </result>
+            <result name="error">new-complaint.jsp</result>
+        </action>
+        <action name="displayComplaintLog" class="management.ComplaintLog" >
+            <result name="success">complaint-log.jsp</result>
+        </action>
+        <action name="pendingComplaintsLog" class="management.PendingComplaintsLog">
+            <result name="success">admin-pending-complaints.jsp</result>
         </action>
     </package>
 </struts>

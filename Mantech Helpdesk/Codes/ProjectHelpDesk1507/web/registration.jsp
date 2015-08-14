@@ -1,6 +1,6 @@
 <%-- 
-    Document   : admin
-    Created on : Jul 26, 2015, 3:54:43 PM
+    Document   : registration
+    Created on : Jul 26, 2015, 11:05:11 PM
     Author     : Jun
 --%>
 
@@ -13,10 +13,10 @@
         <meta name="keywords" content="" />
         <meta name="description" content="" />
         <link rel="stylesheet" href="css/admin.css" />
-        <title>Admin's page</title>
+        <link rel="stylesheet" href="css/registration.css"/>
+        <title>Registration's page</title>
     </head>
     <body>
-        <s:action name="authentication" executeResult="true"/>
         <div id="page" class="container">
             <div id="header">
                 <div id="logo">
@@ -34,17 +34,23 @@
                 </div>
             </div>
             <div id="main">
-                <div id="banner">
-                    <img src="http://i.imgur.com/oGwbV9D.png" alt="" class="image-full" />
+                <div class="account-info">
+                    <h1>Create new account for employees</h1><br />
+                    <form action="registrationAction" method="post">
+                        <input type="text" name="account" placeholder="Account" required="required" />
+                        <input type="password" name="password" placeholder="Password" required="required"/>
+                        <input type="password" name="repassword" placeholder="Re-Password" required="required"/>
+                        <input type="text" name="fullname" placeholder="Full Name" required="required" />
+                        <input type="email" name="email" placeholder="Email" required="required" />
+                        <br/>
+                        <input type="submit" value="Create" name="create" class="create create-submit"/>
+                    </form>
+                    <s:if test="hasActionMessages()">
+                        <div style="color: red">
+                            <s:actionmessage/>
+                        </div>
+                    </s:if>
                 </div>
-                <div id="welcome">
-                    <div class="title">
-                        <h2>Welcome to Mantech Help Desk</h2>
-                        <span class="byline">Chúng ta cùng tận hưởng một hệ thống Help Desk tuyệt vời</span>
-                    </div>
-                    <p>the news</p>
-                </div>
-                
                 <div id="copyright">
                     <span>Copyright © 2015 <a href="#">FGR's Group</a> | Project sem 4</span>
                 </div>

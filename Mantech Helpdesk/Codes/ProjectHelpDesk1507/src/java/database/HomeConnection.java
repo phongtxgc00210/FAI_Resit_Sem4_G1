@@ -70,14 +70,18 @@ public class HomeConnection extends ActionSupport implements RequestAware {
         // Check User exist!
         Users u = loginAction();
         if (u != null) {
-            Map session = ActionContext.getContext().getSession();  
+            Map session = ActionContext.getContext().getSession();
             String userName = u.getUserName();
             String userAccount = u.getUserAccount();
             session.put("username", userName);
             session.put("useraccount", userAccount);
+            session.put("userid", u.getUserID());
             if (u.getUserRole() == 1) {
                 this.ret = "admin";
                 session.put("userrole", "admin");
+            } else if (u.getUserRole() == 3) {
+                this.ret = "technical";
+                session.put("userrole", "technical");
             } else {
                 this.ret = "user";
                 session.put("userrole", "user");
